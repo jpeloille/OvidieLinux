@@ -1,0 +1,83 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:vm="using:Ovidie.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:reactiveUi="clr-namespace:ReactiveUI;assembly=ReactiveUI"
+
+        Width="1200" Height="800"
+        WindowStartupLocation="CenterScreen"
+        x:Class="Ovidie.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Ovidie">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+ 
+    <DockPanel>
+        
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open..."/>
+                <Separator/>
+                <MenuItem Header="_Exit"/>
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Copy"/>
+                <MenuItem Header="Paste"/>
+            </MenuItem>
+            <MenuItem Header="_Data">
+                <MenuItem Header="Payees"/>
+                <MenuItem Header="Accounts"/>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel DockPanel.Dock="Left" Width="180" Margin="5">
+            <ComboBox Margin="2" Name="cbAccounts" Width="174" 
+                      ItemsSource="{Binding accounts}"
+                      SelectedItem="{Binding SelectedAccount}">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding CpeLibelle}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button  Margin="2" Width="174" Content="Test" Command="{Binding OnClick}" /> 
+        </StackPanel>
+        
+        <DataGrid 
+            DockPanel.Dock="Right"
+            Margin="5" 
+                  ItemsSource="{Binding Entries, Mode=TwoWay}" 
+                  AutoGenerateColumns="False" IsReadOnly="True" 
+                  GridLinesVisibility="All"
+                  BorderThickness="1" BorderBrush="Gray">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Width="*" 
+                                    Binding="{Binding TransactionDate}"/>
+                <DataGridTextColumn Header="Method" Width="*" 
+                                    Binding="{Binding MethodLabel}" />
+                <DataGridTextColumn Header="Number" Width="*"
+                                    Binding="{Binding CheckNumber}" />
+                <DataGridTextColumn Header="Payee" Width="*"
+                                    CanUserSort="True" CanUserReorder="True" CanUserResize="True"
+                                    Binding="{Binding PayeeLabel}" />
+                <DataGridTextColumn Header="Debt" Width="*" 
+                                    Binding="{Binding Debt,
+                                    Converter = new StringFormatValueConverter(binding.StringFormat, null), 
+                                    StringFormat={0:N2} }"/>
+                <DataGridTextColumn Header="Credit" Width="*" 
+                                    Binding="{Binding Credit}" />
+                <DataGridTextColumn Header="Balance" Width="*" 
+                                    Binding="{Binding Balance}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        
+    </DockPanel>
+</Window>
+

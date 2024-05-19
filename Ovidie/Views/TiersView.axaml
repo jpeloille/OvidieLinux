@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Ovidie.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight=""
+        x:Name="PayeesView"
+        x:Class="Ovidie.Views.TiersView"
+        x:DataType="vm:TiersViewModel"
+        Width="200" Height="170"
+        Title="TiersView">
+        
+        <Design.DataContext>
+                <vm:TiersViewModel/>
+        </Design.DataContext>
+
+        <DockPanel Margin="10">
+                <StackPanel DockPanel.Dock="Top">
+                        <TextBlock> Compte: </TextBlock>
+                        <TextBox Margin="0,0,0,5" Text="{Binding }"/>
+                        <TextBlock> Libellé: </TextBlock>
+                        <TextBox Margin="0,0,0,5" Text="{Binding }"/>
+                </StackPanel>  
+                <WrapPanel Margin="5">
+                        <Button Width="70" Command="{Binding OnDataValidation}"
+                                CommandParameter="{Binding ElementName=PayeesView}">Enter</Button>
+                        <Button Content="Cancel"
+                                Width="70"
+                                Command="{Binding OnCancelData}"
+                                CommandParameter="{Binding ElementName=PayeesView}" />
+                </WrapPanel>
+        </DockPanel>
+        
+</Window>

@@ -1,0 +1,14 @@
+    <StackPanel>
+        <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
+            <TextBox Grid.Row="0" Grid.Column="0" Name="tbTierLabel" Text="{Binding Path=Tiers.Label}" />
+            <TextBox Grid.Row="1" Grid.Column="0" Name="tbTierIdentifier" Text="{Binding Path=Tiers.Identifier}" />
+            <Button Grid.Row="1" Grid.Column="2" Content="Test" Command="{Binding OnClick}" />
+            
+            <DataGrid Grid.Row="2" Margin="20" ItemsSource="{Binding Payees}" 
+                      AutoGenerateColumns="True" IsReadOnly="True" 
+                      GridLinesVisibility="All"
+                      BorderThickness="1" BorderBrush="Gray">
+            </DataGrid>
+
+        </Grid>
+    </StackPanel>

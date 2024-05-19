@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ovidie", "Ovidie\Ovidie.csproj", "{FEE6D004-1909-4965-9E3B-98E3CF5B5400}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ovidie.EntityModel.SqlServer", "Ovidie.EntityModel.SqlServer\Ovidie.EntityModel.SqlServer.csproj", "{80CF91A3-1439-4CF7-A82C-16A9AE362162}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE6D004-1909-4965-9E3B-98E3CF5B5400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE6D004-1909-4965-9E3B-98E3CF5B5400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE6D004-1909-4965-9E3B-98E3CF5B5400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE6D004-1909-4965-9E3B-98E3CF5B5400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80CF91A3-1439-4CF7-A82C-16A9AE362162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80CF91A3-1439-4CF7-A82C-16A9AE362162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80CF91A3-1439-4CF7-A82C-16A9AE362162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80CF91A3-1439-4CF7-A82C-16A9AE362162}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
