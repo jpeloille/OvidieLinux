@@ -69,8 +69,7 @@
                                     Binding="{Binding PayeeLabel}" />
                 <DataGridTextColumn Header="Debt" Width="*" 
                                     Binding="{Binding Debt,
-                                    Converter = new StringFormatValueConverter(binding.StringFormat, null), 
-                                    StringFormat={0:N2} }"/>
+                                    StringFormat={}{0:N2} }"/>
                 <DataGridTextColumn Header="Credit" Width="*" 
                                     Binding="{Binding Credit}" />
                 <DataGridTextColumn Header="Balance" Width="*" 
