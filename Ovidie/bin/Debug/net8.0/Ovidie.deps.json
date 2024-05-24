@@ -8,12 +8,14 @@
     ".NETCoreApp,Version=v8.0": {
       "Ovidie/1.0.0": {
         "dependencies": {
+          "ActiproSoftware.Controls.Avalonia": "24.1.0",
           "Avalonia": "11.0.10",
           "Avalonia.Desktop": "11.0.10",
           "Avalonia.Diagnostics": "11.0.10",
           "Avalonia.Fonts.Inter": "11.0.10",
           "Avalonia.ReactiveUI": "11.0.10",
           "Avalonia.Themes.Fluent": "11.0.10",
+          "Avalonia.Xaml.Behaviors": "11.0.10.9",
           "AvaloniaUIRibbon": "1.1.0-beta",
           "CommunityToolkit.Mvvm": "8.2.2",
           "Material.Avalonia.DataGrid": "3.6.0",
@@ -21,6 +23,21 @@
         },
         "runtime": {
           "Ovidie.dll": {}
+        }
+      },
+      "ActiproSoftware.Controls.Avalonia/24.1.0": {
+        "dependencies": {
+          "Avalonia": "11.0.10"
+        },
+        "runtime": {
+          "lib/net6.0/ActiproSoftware.Avalonia.Core.dll": {
+            "assemblyVersion": "24.1.0.0",
+            "fileVersion": "24.1.0.0"
+          },
+          "lib/net6.0/ActiproSoftware.Avalonia.Shared.dll": {
+            "assemblyVersion": "24.1.0.0",
+            "fileVersion": "24.1.0.0"
+          }
         }
       },
       "Avalonia/11.0.10": {
@@ -193,7 +210,7 @@
         "dependencies": {
           "Avalonia": "11.0.10",
           "ReactiveUI": "18.3.1",
-          "System.Reactive": "5.0.0"
+          "System.Reactive": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Avalonia.ReactiveUI.dll": {
@@ -275,6 +292,102 @@
           }
         }
       },
+      "Avalonia.Xaml.Behaviors/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Xaml.Interactions": "11.0.10.9",
+          "Avalonia.Xaml.Interactions.Custom": "11.0.10.9",
+          "Avalonia.Xaml.Interactions.DragAndDrop": "11.0.10.9",
+          "Avalonia.Xaml.Interactions.Draggable": "11.0.10.9",
+          "Avalonia.Xaml.Interactions.Events": "11.0.10.9",
+          "Avalonia.Xaml.Interactions.Responsive": "11.0.10.9",
+          "Avalonia.Xaml.Interactivity": "11.0.10.9"
+        }
+      },
+      "Avalonia.Xaml.Interactions/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Xaml.Interactivity": "11.0.10.9"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactions.dll": {
+            "assemblyVersion": "11.0.10.9",
+            "fileVersion": "11.0.10.9"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactions.Custom/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Xaml.Interactivity": "11.0.10.9",
+          "System.Reactive": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactions.Custom.dll": {
+            "assemblyVersion": "11.0.10.9",
+            "fileVersion": "11.0.10.9"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactions.DragAndDrop/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Xaml.Interactivity": "11.0.10.9"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactions.DragAndDrop.dll": {
+            "assemblyVersion": "11.0.10.9",
+            "fileVersion": "11.0.10.9"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactions.Draggable/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Xaml.Interactivity": "11.0.10.9"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactions.Draggable.dll": {
+            "assemblyVersion": "11.0.10.9",
+            "fileVersion": "11.0.10.9"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactions.Events/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Xaml.Interactivity": "11.0.10.9"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactions.Events.dll": {
+            "assemblyVersion": "11.0.10.9",
+            "fileVersion": "11.0.10.9"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactions.Responsive/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10",
+          "Avalonia.Xaml.Interactivity": "11.0.10.9"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactions.Responsive.dll": {
+            "assemblyVersion": "11.0.10.9",
+            "fileVersion": "11.0.10.9"
+          }
+        }
+      },
+      "Avalonia.Xaml.Interactivity/11.0.10.9": {
+        "dependencies": {
+          "Avalonia": "11.0.10"
+        },
+        "runtime": {
+          "lib/net8.0/Avalonia.Xaml.Interactivity.dll": {
+            "assemblyVersion": "11.0.10.9",
+            "fileVersion": "11.0.10.9"
+          }
+        }
+      },
       "AvaloniaUIRibbon/1.1.0-beta": {
         "dependencies": {
           "Avalonia": "11.0.10",
@@ -332,7 +445,7 @@
       },
       "DynamicData/7.9.5": {
         "dependencies": {
-          "System.Reactive": "5.0.0"
+          "System.Reactive": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/DynamicData.dll": {
@@ -1181,11 +1294,11 @@
         }
       },
       "System.Numerics.Vectors/4.5.0": {},
-      "System.Reactive/5.0.0": {
+      "System.Reactive/6.0.0": {
         "runtime": {
-          "lib/net5.0/System.Reactive.dll": {
-            "assemblyVersion": "5.0.0.0",
-            "fileVersion": "5.0.0.1"
+          "lib/net6.0/System.Reactive.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.1"
           }
         }
       },
@@ -1316,6 +1429,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ActiproSoftware.Controls.Avalonia/24.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3wq1QGo8E+7l0gnryLwsiJLRfQrJ3DnoIvNZwGKqoQp02NSaLm8M2pdHyM87ejeLWx1WNYlwT1OegUVxZ4iNWw==",
+      "path": "actiprosoftware.controls.avalonia/24.1.0",
+      "hashPath": "actiprosoftware.controls.avalonia.24.1.0.nupkg.sha512"
+    },
     "Avalonia/11.0.10": {
       "type": "package",
       "serviceable": true,
@@ -1434,6 +1554,62 @@
       "sha512": "sha512-WUhPBIYqjJdBf1TgUARYNyH1clntZ435eQzR+db4fxrg4OemePX6nJTp1Lh7G/hTVEvRgWCoYFccqm/6vsfJQQ==",
       "path": "avalonia.x11/11.0.10",
       "hashPath": "avalonia.x11.11.0.10.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Behaviors/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lLhMMwhmA47iS5uOChMoXkzlKwrJe6saWr/Vb7gPESXLvengCXDQ8xeiQn3BKtuKRSEzot3LOdpGBAIK/qciWA==",
+      "path": "avalonia.xaml.behaviors/11.0.10.9",
+      "hashPath": "avalonia.xaml.behaviors.11.0.10.9.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactions/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ku/5T37B4/udtYRNgJIvNAp0h4ycKHLfsu4Rmb2dKc+Jeg6Hg4RUfbhTzGHC1zjdIpFmVaWFl39WhTXElx2cIg==",
+      "path": "avalonia.xaml.interactions/11.0.10.9",
+      "hashPath": "avalonia.xaml.interactions.11.0.10.9.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactions.Custom/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4DR7Bbe67QA2S8IYe2vPdKh6yEeK9RePRO3U6Ej25tOt5hiK80t/ZcBExwxrOks6Rt2BYQh3XVnRSIM6rx/kCg==",
+      "path": "avalonia.xaml.interactions.custom/11.0.10.9",
+      "hashPath": "avalonia.xaml.interactions.custom.11.0.10.9.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactions.DragAndDrop/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UVm6aScp20M79eB0vfhT5FXkN2CbKN5PgGBdBlaaloynkaiUGItp8OCksABQni+tO+YX2qiNMMSbpocGbBIEhw==",
+      "path": "avalonia.xaml.interactions.draganddrop/11.0.10.9",
+      "hashPath": "avalonia.xaml.interactions.draganddrop.11.0.10.9.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactions.Draggable/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uWlL8g9rLcr3XkV5XsJcnZXuEXL5fahLmrxwFqHS7orSq1aAxKP6ZqOngZRvCkqycWTmfr1xJXZFI3usu2hyXA==",
+      "path": "avalonia.xaml.interactions.draggable/11.0.10.9",
+      "hashPath": "avalonia.xaml.interactions.draggable.11.0.10.9.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactions.Events/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y5/4gqglma2utmw9NQoT/UV+KjY0uGxQ+jQVYgiu82dP6CYwWSpo3xLTg7wOxOk0RCjl/wKO1pMkbpKtHVqm9w==",
+      "path": "avalonia.xaml.interactions.events/11.0.10.9",
+      "hashPath": "avalonia.xaml.interactions.events.11.0.10.9.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactions.Responsive/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lCE9SyXWTUr8CDxWv5FoAxlJM/BQbW2t2JSgh62WOVjR7FoTGV9SQW10ziYvYgYG3dgyt3NfvasXA12Cf8qp/A==",
+      "path": "avalonia.xaml.interactions.responsive/11.0.10.9",
+      "hashPath": "avalonia.xaml.interactions.responsive.11.0.10.9.nupkg.sha512"
+    },
+    "Avalonia.Xaml.Interactivity/11.0.10.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B9M5ylpslHvgi8MLFjE1yIzNBQEl4Z7MdePT7y3Z9wFts2Mzc+EPZqPXr5lyDDD2nBiKwfeiNnukd0LyYvN/ug==",
+      "path": "avalonia.xaml.interactivity/11.0.10.9",
+      "hashPath": "avalonia.xaml.interactivity.11.0.10.9.nupkg.sha512"
     },
     "AvaloniaUIRibbon/1.1.0-beta": {
       "type": "package",
@@ -1904,12 +2080,12 @@
       "path": "system.numerics.vectors/4.5.0",
       "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
-    "System.Reactive/5.0.0": {
+    "System.Reactive/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
-      "path": "system.reactive/5.0.0",
-      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
+      "sha512": "sha512-31kfaW4ZupZzPsI5PVe77VhnvFF55qgma7KZr/E0iFTs6fmdhhG8j0mgEx620iLTey1EynOkEfnyTjtNEpJzGw==",
+      "path": "system.reactive/6.0.0",
+      "hashPath": "system.reactive.6.0.0.nupkg.sha512"
     },
     "System.Reflection.Metadata/5.0.0": {
       "type": "package",

@@ -113,6 +113,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "ActiproSoftware.Controls.Avalonia": {
+              "target": "Package",
+              "version": "[24.1.0, )"
+            },
             "Avalonia": {
               "target": "Package",
               "version": "[11.0.10, )"
@@ -136,6 +140,10 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.10, )"
+            },
+            "Avalonia.Xaml.Behaviors": {
+              "target": "Package",
+              "version": "[11.0.10.9, )"
             },
             "AvaloniaUIRibbon": {
               "target": "Package",

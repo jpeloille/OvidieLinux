@@ -4,7 +4,9 @@
     <option name="projectPerEditor">
       <map>
         <entry key="Ovidie/App.axaml" value="Ovidie/Ovidie.csproj" />
+        <entry key="Ovidie/Views/EntryDialogView.axaml" value="Ovidie/Ovidie.csproj" />
         <entry key="Ovidie/Views/MainWindow.axaml" value="Ovidie/Ovidie.csproj" />
+        <entry key="Ovidie/Views/MessageBox.axaml" value="Ovidie/Ovidie.csproj" />
         <entry key="Ovidie/Views/TiersView.axaml" value="Ovidie/Ovidie.csproj" />
         <entry key="Ovidie/Views/test.axaml" value="Ovidie/Ovidie.csproj" />
       </map>

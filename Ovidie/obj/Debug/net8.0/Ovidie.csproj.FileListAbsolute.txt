@@ -185,3 +185,13 @@
 /home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Ovidie.EntityModel.SqlServer.dll
 /home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Ovidie.EntityModel.SqlServer.pdb
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/obj/Debug/net8.0/Ovidie.sourcelink.json
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Avalonia.Xaml.Interactions.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Custom.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Avalonia.Xaml.Interactions.DragAndDrop.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Draggable.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Events.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Responsive.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/Avalonia.Xaml.Interactivity.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/ActiproSoftware.Avalonia.Core.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie/bin/Debug/net8.0/ActiproSoftware.Avalonia.Shared.dll

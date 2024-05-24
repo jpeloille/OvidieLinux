@@ -18,6 +18,8 @@ public class EntryDataGridListItems
 
     public List<EntryDataGridItem> GetEntries(Guid AccountIdentifier)
     {
+        OvidieDbContext dbContext = new OvidieDbContext();
+        
             _entries = dbContext.TEcritures
                 .Where(entry => entry.EcrFkCpePkCompteId == AccountIdentifier)
                 .OrderBy(entry=>entry.EcrDate)
@@ -42,6 +44,7 @@ public class EntryDataGridListItems
         foreach (var entry in _entries)
         {
             item = new EntryDataGridItem();
+            item.EntryIdentifier = entry.EcrPkId;
             item.AccountIdentifier = AccountIdentifier;
             item.PayeeIdentifier = entry.EcrFlPkTiersId;
             item.MethodIdentifier = entry.EcrFkMptPkModePaiementId;

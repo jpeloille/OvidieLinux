@@ -12,3 +12,4 @@
 /home/jpeloille/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/obj/Debug/net8.0/Ovidie.EntityModel.SqlServer.pdb
 /home/jpeloille/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/obj/Debug/net8.0/Ovidie.EntityModel.SqlServer.genruntimeconfig.cache
 /home/jpeloille/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/obj/Debug/net8.0/ref/Ovidie.EntityModel.SqlServer.dll
+/home/jpeloille/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/obj/Debug/net8.0/Ovidie.EntityModel.SqlServer.sourcelink.json

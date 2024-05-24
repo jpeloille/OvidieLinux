@@ -1,6 +1,9 @@
 ﻿using Avalonia;
 using Avalonia.ReactiveUI;
 using System;
+using System.Globalization;
+using System.Threading;
+using Ovidie.EntityModel.SqlServer.Context;
 
 namespace Ovidie;
 
@@ -13,11 +16,18 @@ sealed class Program
     public static void Main(string[] args) => BuildAvaloniaApp()
         .StartWithClassicDesktopLifetime(args);
 
+    public static OvidieDbContext DbContext = new OvidieDbContext();
+    
     // Avalonia configuration, don't remove; also used by visual designer.
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
+    {
+        Thread.CurrentThread.CurrentCulture = new CultureInfo("fr-fr");
+        
+        return AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .WithInterFont()
             .LogToTrace()
             .UseReactiveUI();
+    
+    } 
 }

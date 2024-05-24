@@ -1,0 +1,101 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+        
+        xmlns:vm="using:Ovidie.ViewModels"
+        x:Name="EntryDialog"
+        x:Class="Ovidie.Views.EntryDialogView"
+        x:DataType="vm:EntryDialogViewModel"
+        Width="400" Height="600"
+        WindowStartupLocation="CenterOwner"
+        
+        Title="EntryDialogView">
+
+        <Design.DataContext>
+                <vm:EntryDialogViewModel/>
+        </Design.DataContext>
+        
+        <DockPanel Margin="10">
+                <StackPanel DockPanel.Dock="Top">
+                        
+                        <WrapPanel Margin="5,5,5,0">
+                                <TextBlock Margin="10,10,10,10" 
+                                           Width="100">Date</TextBlock>
+                                <CalendarDatePicker Margin="5,5,5,0" 
+                                         Width="180" 
+                                         SelectedDate="{Binding Entry.EcrDate,Mode=TwoWay}"
+                                         CustomDateFormatString="dd/MM/yyyy"/>
+                        </WrapPanel>
+                        
+                        <WrapPanel Margin="5,5,5,0" >
+                                <TextBlock Margin="10,10,10,10" 
+                                           Width="100">Method</TextBlock>
+                                <ComboBox Margin="5,5,5,0" Width="180"
+                                          ItemsSource="{Binding Methods}"
+                                          SelectedItem="{Binding SelectedMethod, Mode=TwoWay}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding  MptLibelle}"></TextBlock>
+                                            </StackPanel>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                        </WrapPanel>
+
+                        <WrapPanel Margin="5,5,5,0">
+                                <TextBlock Margin="10,10,10,10" 
+                                           Width="100">Numéro</TextBlock>
+                                <TextBox Margin="5,5,5,0" 
+                                         Width="180"></TextBox>
+                        </WrapPanel>
+                        
+                        <WrapPanel Margin="5,5,5,0">
+                                <TextBlock Margin="10,10,10,10" 
+                                           Width="100">Debt</TextBlock>
+                                <TextBox Margin="5,5,5,0" 
+                                         Width="180" Text="{Binding Entry.EcrDebit}"></TextBox>
+                        </WrapPanel>
+                    <WrapPanel Margin="5,5,5,0">
+                        <TextBlock Margin="10,10,10,10" 
+                                   Width="100">Credit</TextBlock>
+                        <TextBox Margin="5,5,5,0" 
+                                 Width="180" Text="{Binding Entry.EcrCredit}"
+                                 ></TextBox>
+                    </WrapPanel>
+                    
+                    <WrapPanel Margin="5,5,5,0" >
+
+                        <AutoCompleteBox Margin="5,5,5,0" 
+                                  Width="360" 
+                                  Text="{Binding SelectedPayee.TerNom}"
+                                  ItemsSource="{Binding PayeesLabels, Mode=TwoWay}">
+                            
+                            <Interaction.Behaviors>
+                                <EventTriggerBehavior EventName="SelectionChanged">
+                                    <InvokeCommandAction 
+                                        Command="{Binding OnPayeeSelectedItemChanged}"
+                                        PassEventArgsToCommand="True">
+                                    </InvokeCommandAction>
+                                </EventTriggerBehavior>
+                            </Interaction.Behaviors>
+                            
+                        </AutoCompleteBox>
+                        
+                    </WrapPanel>
+
+                    <WrapPanel Margin="5,5,5,0" >
+                        <Button Width="84" Content="Ok"
+                                Command="{Binding OnSaveDataRequested}"
+                                CommandParameter="{Binding ElementName=EntryDialog}"></Button>
+                        <Button Width="84" Content="Cancel"
+                                Command="{Binding OnCancelDataRequested}"
+                                CommandParameter="{Binding ElementName=EntryDialog}"></Button>
+                    </WrapPanel>
+                    
+                </StackPanel>
+        </DockPanel>
+</Window>

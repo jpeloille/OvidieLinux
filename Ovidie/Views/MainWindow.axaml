@@ -33,6 +33,13 @@
                 <MenuItem Header="Payees"/>
                 <MenuItem Header="Accounts"/>
             </MenuItem>
+            <MenuItem Header="_Entries">
+                <MenuItem Header="New"/>
+                <MenuItem Header="New from foreign"/>
+                <MenuItem Header="Modify"/>
+                <MenuItem Header="Delete"/>
+            </MenuItem>
+
         </Menu>
 
         <StackPanel DockPanel.Dock="Left" Width="180" Margin="5">
@@ -47,16 +54,18 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <Button  Margin="2" Width="174" Content="Test" Command="{Binding OnClick}" /> 
+            <Button Margin="2" Width="174" Content="New entry" Command="{Binding NewEntry}" />
+            <Button Margin="2" Width="174" Content="Modifiy entry" Command="{Binding ModifyEntry}"></Button>
+            <Button Margin="2" Width="174" Content="Delete entry" Command="{Binding DeleteEntry}"></Button>
         </StackPanel>
         
-        <DataGrid 
-            DockPanel.Dock="Right"
-            Margin="5" 
-                  ItemsSource="{Binding Entries, Mode=TwoWay}" 
-                  AutoGenerateColumns="False" IsReadOnly="True" 
-                  GridLinesVisibility="All"
-                  BorderThickness="1" BorderBrush="Gray">
+        <DataGrid Name="EntriesGrid"
+            DockPanel.Dock="Right" Margin="5" 
+                AutoGenerateColumns="False" IsReadOnly="True" 
+                GridLinesVisibility="All"
+                BorderThickness="1" BorderBrush="Gray"
+                ItemsSource="{Binding Entries, Mode=TwoWay}"
+                SelectedItem="{Binding SelectedEntryDataGridItem, Mode=TwoWay}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date" Width="*" 
                                     Binding="{Binding TransactionDate}"/>
@@ -66,17 +75,33 @@
                                     Binding="{Binding CheckNumber}" />
                 <DataGridTextColumn Header="Payee" Width="*"
                                     CanUserSort="True" CanUserReorder="True" CanUserResize="True"
-                                    Binding="{Binding PayeeLabel}" />
+                                    Binding="{Binding PayeeLabel}"/>
                 <DataGridTextColumn Header="Debt" Width="*" 
                                     Binding="{Binding Debt,
-                                    StringFormat={}{0:N2} }"/>
+                                    StringFormat={}{0:C2} }"/>
                 <DataGridTextColumn Header="Credit" Width="*" 
-                                    Binding="{Binding Credit}" />
+                                    Binding="{Binding Credit,
+                                    StringFormat={}{0:C2} }"/>
                 <DataGridTextColumn Header="Balance" Width="*" 
-                                    Binding="{Binding Balance}" />
+                                    Binding="{Binding Balance,
+                                    StringFormat={}{0:C2} }"/>
             </DataGrid.Columns>
+            
+            <Interaction.Behaviors>
+                <EventTriggerBehavior EventName="SelectionChanged">
+                    <InvokeCommandAction 
+                        Command="{Binding OnSelectedItemChanged}"
+                        PassEventArgsToCommand="True">
+                    </InvokeCommandAction>
+                </EventTriggerBehavior>
+            </Interaction.Behaviors>
+            
+     
+            
         </DataGrid>
-        
+            
     </DockPanel>
+    
+
 </Window>
 

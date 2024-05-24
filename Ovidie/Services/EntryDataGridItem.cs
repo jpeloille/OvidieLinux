@@ -4,6 +4,7 @@ namespace Ovidie.Services;
 
 public class EntryDataGridItem
 {
+    public Guid EntryIdentifier {get; set; }
     public Guid AccountIdentifier { get; set; }
     public Guid? PayeeIdentifier { get; set; }
     public Guid? MethodIdentifier { get; set; }

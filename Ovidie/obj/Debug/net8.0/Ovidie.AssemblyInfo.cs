@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ovidie")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0da9e74fbdb147f2dbdcebe682722549429b1a39")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb4b3dbcf6b3b311ca9d011a3c0029bf294d01f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ovidie")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ovidie")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
