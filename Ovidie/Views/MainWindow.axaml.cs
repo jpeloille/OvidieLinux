@@ -7,12 +7,19 @@ using ReactiveUI;
 
 namespace Ovidie.Views;
 
-public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
+public partial class MainWindow : Window
 {
     public MainWindow()
     {
         InitializeComponent();
-        
+
+        EntriesGrid.SelectionChanged += OnDataGridSelectionChanged;
     }
-    
+
+    private void OnDataGridSelectionChanged(object? sender, SelectionChangedEventArgs args)
+    {
+        var item = args.AddedItems[0];
+        EntriesGrid.ScrollIntoView(item, null);
+    }
+
 }

@@ -1,11 +1,12 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:vm="using:Ovidie.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:reactiveUi="clr-namespace:ReactiveUI;assembly=ReactiveUI"
 
+        
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        
         Width="1200" Height="800"
         WindowStartupLocation="CenterScreen"
         x:Class="Ovidie.Views.MainWindow"
@@ -54,13 +55,22 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <Button Margin="2" Width="174" Content="New entry" Command="{Binding NewEntry}" />
-            <Button Margin="2" Width="174" Content="Modifiy entry" Command="{Binding ModifyEntry}"></Button>
-            <Button Margin="2" Width="174" Content="Delete entry" Command="{Binding DeleteEntry}"></Button>
+            
+            <Button Content="New entry"
+                    Margin="2" Width="174" HorizontalContentAlignment="Center"
+                    Command="{Binding NewEntry}" />
+            
+            <Button Content="Modifiy entry"
+                    Margin="2" Width="174" HorizontalContentAlignment="Center"
+                    Command="{Binding ModifyEntry}"></Button>
+            
+            <Button Content="Delete entry" 
+                    Margin="2" Width="174" HorizontalContentAlignment="Center"
+                    Command="{Binding DeleteEntry}"></Button>
         </StackPanel>
         
-        <DataGrid Name="EntriesGrid"
-            DockPanel.Dock="Right" Margin="5" 
+        <DataGrid Name="EntriesGrid" 
+                DockPanel.Dock="Right" Margin="5" 
                 AutoGenerateColumns="False" IsReadOnly="True" 
                 GridLinesVisibility="All"
                 BorderThickness="1" BorderBrush="Gray"
@@ -76,15 +86,34 @@
                 <DataGridTextColumn Header="Payee" Width="*"
                                     CanUserSort="True" CanUserReorder="True" CanUserResize="True"
                                     Binding="{Binding PayeeLabel}"/>
-                <DataGridTextColumn Header="Debt" Width="*" 
-                                    Binding="{Binding Debt,
-                                    StringFormat={}{0:C2} }"/>
-                <DataGridTextColumn Header="Credit" Width="*" 
-                                    Binding="{Binding Credit,
-                                    StringFormat={}{0:C2} }"/>
-                <DataGridTextColumn Header="Balance" Width="*" 
-                                    Binding="{Binding Balance,
-                                    StringFormat={}{0:C2} }"/>
+                
+                <DataGridTemplateColumn Header="Debt" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Debt, StringFormat={}{0:### ### ###}}" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                
+                <DataGridTemplateColumn Header="Credit" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Credit, StringFormat={}{0:### ### ###}}" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+         
+                <DataGridTemplateColumn Header="Balance" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Balance, StringFormat={}{0:### ### ### XPF}}" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+   
             </DataGrid.Columns>
             
             <Interaction.Behaviors>
@@ -96,12 +125,9 @@
                 </EventTriggerBehavior>
             </Interaction.Behaviors>
             
-     
-            
-        </DataGrid>
+        </DataGrid> 
             
     </DockPanel>
     
-
 </Window>
 

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 using Avalonia.Controls;
 using Azure.Identity;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using Ovidie.EntityModel.SqlServer.Context;
 using Ovidie.EntityModel.SqlServer.Entities;
+using Ovidie.Events;
+using Ovidie.Messages;
 using Ovidie.Services;
 using ReactiveUI;
 
@@ -16,7 +19,8 @@ namespace Ovidie.ViewModels;
 public class EntryDialogViewModel : ViewModelBase
 {
     private bool isInCreationMode = false;
-
+    public event EventHandler<EntityEventArgs<TEcriture>> EntityPersisted;
+    
     private OvidieDbContext _dbContext;
     
     private MethodServices _methodServices = new MethodServices();
@@ -152,6 +156,8 @@ public class EntryDialogViewModel : ViewModelBase
         }
 
         result = Entry;
+        WeakReferenceMessenger.Default.Send(new EntriesDbTableChangedMessage(Entry));
+        OnEntityUpdated(new EntityEventArgs<TEcriture>(Entry, isInCreationMode));
         
         if (window != null) window.Close();        
     }
@@ -161,4 +167,8 @@ public class EntryDialogViewModel : ViewModelBase
         if (window != null) window.Close();
     }
 
+    protected virtual void OnEntityUpdated(EntityEventArgs<TEcriture> arg)
+    {
+        EntityPersisted?.Invoke(this, arg);
+    }
 }
