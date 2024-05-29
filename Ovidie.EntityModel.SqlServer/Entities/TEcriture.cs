@@ -7,7 +7,7 @@ public partial class TEcriture
 {
     public Guid EcrPkId { get; set; }
 
-    public DateTime? EcrDate { get; set; }
+    public DateTime EcrDate { get; set; }
 
     public DateTime? EcrDateValeur { get; set; }
 

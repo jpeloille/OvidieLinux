@@ -50,9 +50,9 @@ public class EntryDataGridListItems
             item.MethodIdentifier = entry.EcrFkMptPkModePaiementId;
             
             item.TransactionDate = new DateOnly(
-                entry.EcrDate.Value.Date.Year,
-                entry.EcrDate.Value.Date.Month,
-                entry.EcrDate.Value.Date.Day);
+                entry.EcrDate.Year,
+                entry.EcrDate.Month,
+                entry.EcrDate.Day);
             
             item.MethodLabel = _methods
                 .FirstOrDefault(method => method.MptPkModePaimentId == entry.EcrFkMptPkModePaiementId)!

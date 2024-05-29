@@ -13,7 +13,7 @@ public partial class TFoliot
 
     public DateOnly? FltPeriodStart { get; set; }
 
-    public DateOnly? FltPeriodEnd { get; set; }
+    public DateTime FltPeriodEnd { get; set; }
 
     public Guid? FltFkCpePkCompteId { get; set; }
 }
