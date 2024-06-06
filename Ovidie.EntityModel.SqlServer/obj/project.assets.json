@@ -4124,6 +4124,7 @@
         "net8.0"
       ],
       "sources": {
+        "/home/jpeloille/.dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4175,7 +4176,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/jpeloille/.dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

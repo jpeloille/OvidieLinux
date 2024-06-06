@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ovidie.EntityModel.SqlServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ddf41d6f5ca9ba81247f8df7787fe91b1e68410")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a5c23d676ef35997d93393f548bcc22f02e94a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ovidie.EntityModel.SqlServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ovidie.EntityModel.SqlServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
