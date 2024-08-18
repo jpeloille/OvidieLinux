@@ -4106,25 +4106,24 @@
     ]
   },
   "packageFolders": {
-    "/home/jpeloille/.nuget/packages/": {}
+    "/home/jpeloille-desktop/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/jpeloille/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/Ovidie.EntityModel.SqlServer.csproj",
+      "projectUniqueName": "/home/jpeloille-desktop/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/Ovidie.EntityModel.SqlServer.csproj",
       "projectName": "Ovidie.EntityModel.SqlServer",
-      "projectPath": "/home/jpeloille/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/Ovidie.EntityModel.SqlServer.csproj",
-      "packagesPath": "/home/jpeloille/.nuget/packages/",
-      "outputPath": "/home/jpeloille/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/obj/",
+      "projectPath": "/home/jpeloille-desktop/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/Ovidie.EntityModel.SqlServer.csproj",
+      "packagesPath": "/home/jpeloille-desktop/.nuget/packages/",
+      "outputPath": "/home/jpeloille-desktop/RiderProjects/Ovidie/Ovidie.EntityModel.SqlServer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/jpeloille/.nuget/NuGet/NuGet.Config"
+        "/home/jpeloille-desktop/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/home/jpeloille/.dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4176,7 +4175,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/jpeloille/.dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
